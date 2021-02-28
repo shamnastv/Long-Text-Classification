@@ -1,0 +1,251 @@
+comet_ml is installed but `COMET_API_KEY` is not set.
+Namespace(batch_size=8, device=0, dropout=0.5, early_stop=10, epochs=100, hidden_dim=100, lr=0.001, num_layers=1, seed=0, weight_decay=1e-06)
+device :  cuda:0
+train size : 7631 7631
+dev size : 847 847
+test size : 3000
+Model(
+  (sent_encoder): SentenceGRU(
+    (gru): GRU(768, 100, batch_first=True, dropout=0.5, bidirectional=True)
+    (linear1): Linear(in_features=200, out_features=100, bias=True)
+    (linear2): Linear(in_features=200, out_features=100, bias=True)
+    (dropout): Dropout(p=0.5, inplace=False)
+    (attention): Attention(
+      (linears): ModuleList(
+        (0): Linear(in_features=200, out_features=200, bias=False)
+        (1): Linear(in_features=200, out_features=1, bias=False)
+      )
+    )
+  )
+  (doc_embed): DocumentGRU(
+    (gru): GRU(100, 100, dropout=0.5, bidirectional=True)
+    (linear1): Linear(in_features=200, out_features=100, bias=True)
+    (linear2): Linear(in_features=200, out_features=100, bias=True)
+    (dropout): Dropout(p=0.5, inplace=False)
+    (attention): Attention(
+      (linears): ModuleList(
+        (0): Linear(in_features=200, out_features=200, bias=False)
+        (1): Linear(in_features=200, out_features=1, bias=False)
+      )
+    )
+  )
+  (classifier): Linear(in_features=100, out_features=2, bias=True)
+  (sent_norm): BatchNorm1d(100, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (doc_norm): BatchNorm1d(100, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+)
+Adam (
+Parameter Group 0
+    amsgrad: False
+    betas: (0.9, 0.999)
+    eps: 1e-08
+    initial_lr: 0.001
+    lr: 0.001
+    weight_decay: 1e-06
+)
+accuracy train: 0.444110 val: 0.455726, max val: 0.455726
+Epoch :  1 loss_accum training:  366.11905951052904 Time :  105
+accuracy train: 0.870528 val: 0.848878, max val: 0.848878
+
+Epoch :  2 loss_accum training:  314.53424865938723 Time :  201
+accuracy train: 0.870266 val: 0.850059, max val: 0.850059
+
+Epoch :  3 loss_accum training:  284.84068842977285 Time :  298
+accuracy train: 0.893723 val: 0.868949, max val: 0.868949
+
+Epoch :  4 loss_accum training:  264.60321918781847 Time :  392
+accuracy train: 0.893592 val: 0.864227, max val: 0.868949
+
+Epoch :  5 loss_accum training:  236.20684177754447 Time :  477
+accuracy train: 0.920718 val: 0.858323, max val: 0.868949
+
+Epoch :  6 loss_accum training:  197.98117460077628 Time :  560
+accuracy train: 0.954265 val: 0.861865, max val: 0.868949
+
+Epoch :  7 loss_accum training:  168.0616207132116 Time :  642
+accuracy train: 0.961866 val: 0.833530, max val: 0.868949
+
+Epoch :  8 loss_accum training:  111.07289418426808 Time :  726
+accuracy train: 0.981261 val: 0.848878, max val: 0.868949
+
+Epoch :  9 loss_accum training:  81.71598130429629 Time :  810
+accuracy train: 0.987158 val: 0.857143, max val: 0.868949
+
+Epoch :  10 loss_accum training:  58.66970640933141 Time :  894
+accuracy train: 0.986633 val: 0.834711, max val: 0.868949
+
+Epoch :  11 loss_accum training:  48.16274823551066 Time :  975
+accuracy train: 0.992530 val: 0.865407, max val: 0.868949
+
+Epoch :  12 loss_accum training:  43.62135140935425 Time :  1054
+accuracy train: 0.995807 val: 0.848878, max val: 0.868949
+
+Epoch :  13 loss_accum training:  33.85345477098599 Time :  1135
+accuracy train: 0.991875 val: 0.846517, max val: 0.868949
+
+Epoch :  14 loss_accum training:  28.824820217385422 Time :  1217
+accuracy train: 0.996462 val: 0.838253, max val: 0.868949
+/home/shamnast/.local/lib/python3.6/site-packages/torch/nn/modules/rnn.py:61: UserWarning: dropout option adds dropout after all but last recurrent layer, so non-zero dropout expects num_layers greater than 1, but got dropout=0.5 and num_layers=1
+  "num_layers={}".format(dropout, num_layers))
+
+output saved
+comet_ml is installed but `COMET_API_KEY` is not set.
+Namespace(batch_size=8, device=0, dropout=0.5, early_stop=10, epochs=100, hidden_dim=200, lr=0.001, num_layers=1, seed=0, weight_decay=1e-06)
+device :  cuda:0
+train size : 7631 7631
+dev size : 847 847
+test size : 3000
+Model(
+  (sent_encoder): SentenceGRU(
+    (gru): GRU(768, 200, batch_first=True, dropout=0.5, bidirectional=True)
+    (linear1): Linear(in_features=400, out_features=200, bias=True)
+    (linear2): Linear(in_features=400, out_features=200, bias=True)
+    (dropout): Dropout(p=0.5, inplace=False)
+    (attention): Attention(
+      (linears): ModuleList(
+        (0): Linear(in_features=400, out_features=400, bias=False)
+        (1): Linear(in_features=400, out_features=1, bias=False)
+      )
+    )
+  )
+  (doc_embed): DocumentGRU(
+    (gru): GRU(200, 200, dropout=0.5, bidirectional=True)
+    (linear1): Linear(in_features=400, out_features=200, bias=True)
+    (linear2): Linear(in_features=400, out_features=200, bias=True)
+    (dropout): Dropout(p=0.5, inplace=False)
+    (attention): Attention(
+      (linears): ModuleList(
+        (0): Linear(in_features=400, out_features=400, bias=False)
+        (1): Linear(in_features=400, out_features=1, bias=False)
+      )
+    )
+  )
+  (classifier): Linear(in_features=200, out_features=2, bias=True)
+  (sent_norm): BatchNorm1d(200, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (doc_norm): BatchNorm1d(200, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+)
+Adam (
+Parameter Group 0
+    amsgrad: False
+    betas: (0.9, 0.999)
+    eps: 1e-08
+    initial_lr: 0.001
+    lr: 0.001
+    weight_decay: 1e-06
+)
+accuracy train: 0.441096 val: 0.456907, max val: 0.456907
+Epoch :  1 loss_accum training:  374.4970943760127 Time :  107
+accuracy train: 0.865548 val: 0.852420, max val: 0.852420
+
+Epoch :  2 loss_accum training:  326.87082653306425 Time :  203
+accuracy train: 0.864107 val: 0.851240, max val: 0.852420
+
+Epoch :  3 loss_accum training:  304.2192851435393 Time :  289
+accuracy train: 0.869873 val: 0.858323, max val: 0.858323
+
+Epoch :  4 loss_accum training:  289.4423292549327 Time :  385
+accuracy train: 0.875639 val: 0.861865, max val: 0.861865
+
+Epoch :  5 loss_accum training:  280.62129370402545 Time :  478
+accuracy train: 0.885991 val: 0.824085, max val: 0.861865
+
+Epoch :  6 loss_accum training:  265.95612161187455 Time :  563
+accuracy train: 0.881667 val: 0.813459, max val: 0.861865
+
+Epoch :  7 loss_accum training:  245.76993880560622 Time :  650
+accuracy train: 0.909710 val: 0.844156, max val: 0.861865
+
+Epoch :  8 loss_accum training:  226.52879942627624 Time :  735
+accuracy train: 0.929105 val: 0.844156, max val: 0.861865
+
+Epoch :  9 loss_accum training:  188.04526305571198 Time :  821
+accuracy train: 0.930809 val: 0.860685, max val: 0.861865
+
+Epoch :  10 loss_accum training:  163.69450752576813 Time :  905
+accuracy train: 0.952824 val: 0.818182, max val: 0.861865
+
+Epoch :  11 loss_accum training:  122.94965075014625 Time :  989
+accuracy train: 0.977460 val: 0.838253, max val: 0.861865
+
+Epoch :  12 loss_accum training:  91.73553074453957 Time :  1071
+accuracy train: 0.988730 val: 0.844156, max val: 0.861865
+
+Epoch :  13 loss_accum training:  68.83038923039567 Time :  1147
+accuracy train: 0.986502 val: 0.847698, max val: 0.861865
+
+Epoch :  14 loss_accum training:  54.0646981393802 Time :  1226
+accuracy train: 0.994889 val: 0.839433, max val: 0.861865
+
+Epoch :  15 loss_accum training:  42.759229027316906 Time :  1308
+accuracy train: 0.995544 val: 0.842975, max val: 0.861865
+/home/shamnast/.local/lib/python3.6/site-packages/torch/nn/modules/rnn.py:61: UserWarning: dropout option adds dropout after all but last recurrent layer, so non-zero dropout expects num_layers greater than 1, but got dropout=0.5 and num_layers=1
+  "num_layers={}".format(dropout, num_layers))
+
+output saved
+comet_ml is installed but `COMET_API_KEY` is not set.
+Namespace(batch_size=8, device=0, dropout=0.5, early_stop=10, epochs=100, hidden_dim=400, lr=0.001, num_layers=1, seed=0, weight_decay=1e-06)
+device :  cuda:0
+train size : 7631 7631
+dev size : 847 847
+test size : 3000
+Model(
+  (sent_encoder): SentenceGRU(
+    (gru): GRU(768, 400, batch_first=True, dropout=0.5, bidirectional=True)
+    (linear1): Linear(in_features=800, out_features=400, bias=True)
+    (linear2): Linear(in_features=800, out_features=400, bias=True)
+    (dropout): Dropout(p=0.5, inplace=False)
+    (attention): Attention(
+      (linears): ModuleList(
+        (0): Linear(in_features=800, out_features=800, bias=False)
+        (1): Linear(in_features=800, out_features=1, bias=False)
+      )
+    )
+  )
+  (doc_embed): DocumentGRU(
+    (gru): GRU(400, 400, dropout=0.5, bidirectional=True)
+    (linear1): Linear(in_features=800, out_features=400, bias=True)
+    (linear2): Linear(in_features=800, out_features=400, bias=True)
+    (dropout): Dropout(p=0.5, inplace=False)
+    (attention): Attention(
+      (linears): ModuleList(
+        (0): Linear(in_features=800, out_features=800, bias=False)
+        (1): Linear(in_features=800, out_features=1, bias=False)
+      )
+    )
+  )
+  (classifier): Linear(in_features=400, out_features=2, bias=True)
+  (sent_norm): BatchNorm1d(400, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (doc_norm): BatchNorm1d(400, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+)
+Adam (
+Parameter Group 0
+    amsgrad: False
+    betas: (0.9, 0.999)
+    eps: 1e-08
+    initial_lr: 0.001
+    lr: 0.001
+    weight_decay: 1e-06
+)
+/home/shamnast/.local/lib/python3.6/site-packages/torch/nn/modules/rnn.py:61: UserWarning: dropout option adds dropout after all but last recurrent layer, so non-zero dropout expects num_layers greater than 1, but got dropout=0.5 and num_layers=1
+  "num_layers={}".format(dropout, num_layers))
+Traceback (most recent call last):
+  File "main.py", line 167, in <module>
+    main()
+  File "main.py", line 149, in main
+    test_y = evaluate(0, model, scheduler, train_x, train_y, dev_x, dev_y, test_x, test_y, device)
+  File "main.py", line 60, in evaluate
+    output = pass_data_iteratively(model, train_x)
+  File "main.py", line 51, in pass_data_iteratively
+    output = model([x[i] for i in idx_tmp])
+  File "/home/shamnast/.local/lib/python3.6/site-packages/torch/nn/modules/module.py", line 727, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/home/shamnast/nlp5/model.py", line 109, in forward
+    word_masks.to(self.device))
+  File "/home/shamnast/.local/lib/python3.6/site-packages/torch/nn/modules/module.py", line 727, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/home/shamnast/nlp5/model.py", line 34, in forward
+    att_w = self.attention(sentences_embd)
+  File "/home/shamnast/.local/lib/python3.6/site-packages/torch/nn/modules/module.py", line 727, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/home/shamnast/nlp5/attention.py", line 38, in forward
+    h = self.activation(h)
+RuntimeError: CUDA out of memory. Tried to allocate 1.78 GiB (GPU 0; 10.92 GiB total capacity; 7.06 GiB already allocated; 89.38 MiB free; 7.07 GiB reserved in total by PyTorch)

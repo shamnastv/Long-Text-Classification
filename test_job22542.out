@@ -1,0 +1,185 @@
+comet_ml is installed but `COMET_API_KEY` is not set.
+Namespace(batch_size=8, device=0, dropout=0.5, early_stop=10, epochs=100, hidden_dim=50, lr=0.001, num_layers=2, seed=0, weight_decay=0.0001)
+device :  cuda:0
+train size : 7631 7631
+dev size : 847 847
+test size : 3000
+Model(
+  (sent_encoder): SentenceGRU(
+    (gru): GRU(768, 50, num_layers=2, batch_first=True, dropout=0.5, bidirectional=True)
+    (linear1): Linear(in_features=100, out_features=50, bias=True)
+    (linear2): Linear(in_features=100, out_features=50, bias=True)
+    (dropout): Dropout(p=0.5, inplace=False)
+    (attention): Attention(
+      (linears): ModuleList(
+        (0): Linear(in_features=100, out_features=100, bias=False)
+        (1): Linear(in_features=100, out_features=1, bias=False)
+      )
+    )
+  )
+  (doc_embed): DocumentGRU(
+    (gru): GRU(50, 50, num_layers=2, dropout=0.5, bidirectional=True)
+    (linear1): Linear(in_features=100, out_features=50, bias=True)
+    (linear2): Linear(in_features=100, out_features=50, bias=True)
+    (dropout): Dropout(p=0.5, inplace=False)
+    (attention): Attention(
+      (linears): ModuleList(
+        (0): Linear(in_features=100, out_features=100, bias=False)
+        (1): Linear(in_features=100, out_features=1, bias=False)
+      )
+    )
+  )
+  (classifier): Linear(in_features=50, out_features=2, bias=True)
+  (sent_norm): BatchNorm1d(50, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (doc_norm): BatchNorm1d(50, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+)
+Adam (
+Parameter Group 0
+    amsgrad: False
+    betas: (0.9, 0.999)
+    eps: 1e-08
+    initial_lr: 0.001
+    lr: 0.001
+    weight_decay: 0.0001
+)
+accuracy train: 0.441227 val: 0.456907, max val: 0.456907
+Epoch :  1 loss_accum training:  410.0762358829379 Time :  88
+accuracy train: 0.867252 val: 0.846517, max val: 0.846517
+
+Epoch :  2 loss_accum training:  328.48324754089117 Time :  168
+accuracy train: 0.863059 val: 0.847698, max val: 0.847698
+
+Epoch :  3 loss_accum training:  317.0284808669239 Time :  245
+accuracy train: 0.869742 val: 0.854782, max val: 0.854782
+
+Epoch :  4 loss_accum training:  306.83160684630275 Time :  326
+accuracy train: 0.872232 val: 0.853601, max val: 0.854782
+
+Epoch :  5 loss_accum training:  290.0165082886815 Time :  398
+accuracy train: 0.879963 val: 0.860685, max val: 0.860685
+
+Epoch :  6 loss_accum training:  279.35134864691645 Time :  477
+accuracy train: 0.886122 val: 0.837072, max val: 0.860685
+
+Epoch :  7 loss_accum training:  272.6039881044999 Time :  548
+accuracy train: 0.889267 val: 0.857143, max val: 0.860685
+
+Epoch :  8 loss_accum training:  258.3691437933594 Time :  620
+accuracy train: 0.902110 val: 0.845336, max val: 0.860685
+
+Epoch :  9 loss_accum training:  243.05837216880172 Time :  691
+accuracy train: 0.896213 val: 0.858323, max val: 0.860685
+
+Epoch :  10 loss_accum training:  235.8225312968716 Time :  761
+accuracy train: 0.906827 val: 0.819362, max val: 0.860685
+
+Epoch :  11 loss_accum training:  212.44814834184945 Time :  830
+accuracy train: 0.931988 val: 0.821724, max val: 0.860685
+
+Epoch :  12 loss_accum training:  205.13030252745375 Time :  899
+accuracy train: 0.920718 val: 0.813459, max val: 0.860685
+
+Epoch :  13 loss_accum training:  185.53017163835466 Time :  970
+accuracy train: 0.944175 val: 0.845336, max val: 0.860685
+
+Epoch :  14 loss_accum training:  175.77606752119027 Time :  1040
+accuracy train: 0.955445 val: 0.831169, max val: 0.860685
+
+Epoch :  15 loss_accum training:  165.04705221555196 Time :  1109
+accuracy train: 0.952824 val: 0.854782, max val: 0.860685
+
+Epoch :  16 loss_accum training:  155.03170516365208 Time :  1179
+accuracy train: 0.960294 val: 0.839433, max val: 0.860685
+
+output saved
+comet_ml is installed but `COMET_API_KEY` is not set.
+Namespace(batch_size=8, device=0, dropout=0.5, early_stop=10, epochs=100, hidden_dim=50, lr=0.0005, num_layers=2, seed=0, weight_decay=0.0001)
+device :  cuda:0
+train size : 7631 7631
+dev size : 847 847
+test size : 3000
+Model(
+  (sent_encoder): SentenceGRU(
+    (gru): GRU(768, 50, num_layers=2, batch_first=True, dropout=0.5, bidirectional=True)
+    (linear1): Linear(in_features=100, out_features=50, bias=True)
+    (linear2): Linear(in_features=100, out_features=50, bias=True)
+    (dropout): Dropout(p=0.5, inplace=False)
+    (attention): Attention(
+      (linears): ModuleList(
+        (0): Linear(in_features=100, out_features=100, bias=False)
+        (1): Linear(in_features=100, out_features=1, bias=False)
+      )
+    )
+  )
+  (doc_embed): DocumentGRU(
+    (gru): GRU(50, 50, num_layers=2, dropout=0.5, bidirectional=True)
+    (linear1): Linear(in_features=100, out_features=50, bias=True)
+    (linear2): Linear(in_features=100, out_features=50, bias=True)
+    (dropout): Dropout(p=0.5, inplace=False)
+    (attention): Attention(
+      (linears): ModuleList(
+        (0): Linear(in_features=100, out_features=100, bias=False)
+        (1): Linear(in_features=100, out_features=1, bias=False)
+      )
+    )
+  )
+  (classifier): Linear(in_features=50, out_features=2, bias=True)
+  (sent_norm): BatchNorm1d(50, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (doc_norm): BatchNorm1d(50, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+)
+Adam (
+Parameter Group 0
+    amsgrad: False
+    betas: (0.9, 0.999)
+    eps: 1e-08
+    initial_lr: 0.0005
+    lr: 0.0005
+    weight_decay: 0.0001
+)
+accuracy train: 0.441227 val: 0.456907, max val: 0.456907
+Epoch :  1 loss_accum training:  416.16416880115867 Time :  98
+accuracy train: 0.867645 val: 0.839433, max val: 0.839433
+
+Epoch :  2 loss_accum training:  318.5355559531599 Time :  188
+accuracy train: 0.864238 val: 0.848878, max val: 0.848878
+
+Epoch :  3 loss_accum training:  303.89559105038643 Time :  277
+accuracy train: 0.870790 val: 0.853601, max val: 0.853601
+
+Epoch :  4 loss_accum training:  288.38042929954827 Time :  372
+accuracy train: 0.876425 val: 0.859504, max val: 0.859504
+
+Epoch :  5 loss_accum training:  270.9705346254632 Time :  491
+accuracy train: 0.889399 val: 0.847698, max val: 0.859504
+
+Epoch :  6 loss_accum training:  264.8974507926032 Time :  600
+accuracy train: 0.884288 val: 0.831169, max val: 0.859504
+
+Epoch :  7 loss_accum training:  255.4847739841789 Time :  711
+accuracy train: 0.903420 val: 0.842975, max val: 0.859504
+
+Epoch :  8 loss_accum training:  243.09329330921173 Time :  818
+accuracy train: 0.908662 val: 0.837072, max val: 0.859504
+
+Epoch :  9 loss_accum training:  225.45838210033253 Time :  930
+accuracy train: 0.911414 val: 0.852420, max val: 0.859504
+
+Epoch :  10 loss_accum training:  215.8086809157394 Time :  1043
+accuracy train: 0.913249 val: 0.819362, max val: 0.859504
+
+Epoch :  11 loss_accum training:  197.7237760904245 Time :  1148
+accuracy train: 0.937885 val: 0.840614, max val: 0.859504
+
+Epoch :  12 loss_accum training:  180.07840074645355 Time :  1240
+accuracy train: 0.944568 val: 0.846517, max val: 0.859504
+
+Epoch :  13 loss_accum training:  167.77671783743426 Time :  1331
+accuracy train: 0.944568 val: 0.850059, max val: 0.859504
+
+Epoch :  14 loss_accum training:  147.89292157115415 Time :  1425
+accuracy train: 0.966191 val: 0.834711, max val: 0.859504
+
+Epoch :  15 loss_accum training:  130.28839797945693 Time :  1519
+accuracy train: 0.965797 val: 0.845336, max val: 0.859504
+
+output saved
